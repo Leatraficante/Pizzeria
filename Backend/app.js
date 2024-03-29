@@ -8,7 +8,9 @@ import mongoose from 'mongoose';
 
 import UsersRouter from '../src/routes/users.router.js';
 
-import configs from './config/configs.js'
+import configs from './src/configs/configs.js'
+
+import { addLogger } from './loggers.js';
 
 const app = express();
 
@@ -23,6 +25,8 @@ app.use((req, res, next) => {
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+app.use(addLogger);
 
 app.use(express.static(`${__dirname}/public`));
 
