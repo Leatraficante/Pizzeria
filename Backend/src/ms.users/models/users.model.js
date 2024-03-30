@@ -76,7 +76,15 @@ const usersSchema = new mongoose.Schema({
         }
     },
    
-    direcciones: [adressSchema],
+    direcciones: {
+        type: [addressSchema],
+        validate: {
+            validator: function(direcciones) {
+                return direcciones.length <= 3; 
+            },
+            message: 'No se pueden agregar más direcciones, se ha alcanzado el límite máximo.'
+        }
+    },
 },{
     timestamps: true
 });
