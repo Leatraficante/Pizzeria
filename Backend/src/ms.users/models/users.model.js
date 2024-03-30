@@ -34,7 +34,7 @@ const addressSchema = new mongoose.Schema({
         type: String,
         required: true,
         validate: {
-            validator: function(value) {
+            validator: function (value) {
                 return /^\d{10}$/.test(value);
             },
             message: props => `${props.value} no es un número de teléfono válido`
@@ -61,12 +61,12 @@ const usersSchema = new mongoose.Schema({
         unique: true,
         index: true,
         validate: {
-            validator: function(value) {
+            validator: function (value) {
                 return /^\S+@\S+\.\S+$/.test(value);
             },
             message: props => `${props.value} no es un correo electrónico válido`
         }
-    },    
+    },
     fechaNacimiento: {
         type: Date,
         required: true
@@ -74,20 +74,20 @@ const usersSchema = new mongoose.Schema({
     password: {
         type: String,
         required: true,
-        minlength: 8, 
+        minlength: 8,
         validate: {
-            validator: function(value) {
+            validator: function (value) {
                 return /[!@#$%^&*(),.?":{}|<>]/.test(value) && /[A-Z]/.test(value) && /[a-z]/.test(value);
             },
             message: props => `${props.value} no es una contraseña segura`
         }
     },
-   
+
     direcciones: {
         type: [addressSchema],
         validate: {
-            validator: function(direcciones) {
-                return direcciones.length <= 3; 
+            validator: function (direcciones) {
+                return direcciones.length <= 3;
             },
             message: 'No se pueden agregar más direcciones, se ha alcanzado el límite máximo.'
         }
@@ -96,7 +96,7 @@ const usersSchema = new mongoose.Schema({
         type: String,
         default: accessRolesEnum.USER,
     },
-},{
+}, {
     timestamps: true
 });
 
