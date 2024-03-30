@@ -1,10 +1,17 @@
 import mongoose from 'mongoose';
+import { accessRolesEnum, addressTypes } from '../../configs/enums';
 
 const usersCollection = 'users';
 
-const adressSchema = new mongoose.Schema({
+const addressSchema = new mongoose.Schema({
     nombre: {
         type: String,
+        required: true,
+        unique: true
+    },
+    tipo: {
+        type: String,
+        enum: Object.values(addressTypes),
         required: true
     },
     calle: {
@@ -84,6 +91,10 @@ const usersSchema = new mongoose.Schema({
             },
             message: 'No se pueden agregar más direcciones, se ha alcanzado el límite máximo.'
         }
+    },
+    role: {
+        type: String,
+        default: accessRolesEnum.USER,
     },
 },{
     timestamps: true

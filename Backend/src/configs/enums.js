@@ -18,9 +18,15 @@ const accessRolesEnum = {
 //     DATABASE_ERROR: 6
 // };
 
+const addressTypes = {
+    CASA: 'CASA',
+    TRABAJO: 'TRABAJO',
+    OTRA: 'OTRA'
+};
+
 
 export {
     passportStrategiesEnum,
     accessRolesEnum,
-    // EErrors
+    addressTypes,
 };
