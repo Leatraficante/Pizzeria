@@ -1,6 +1,6 @@
-import { Router as expressRouter} from 'express';
+import { Router as expressRouter } from 'express';
 import passport from 'passport';
-import {accessRolesEnum, passportStrategiesEnum } from '../configs/enums.js';
+import { accessRolesEnum, passportStrategiesEnum } from '../configs/enums.js';
 
 export default class Router {
     constructor() {
@@ -28,11 +28,11 @@ export default class Router {
         };
 
         res.sendForbidden = (error) => {
-            res.status(403).json({error})
+            res.status(403).json({ error })
         };
 
         res.sendNotFound = (error) => {
-            res.status(404).json({error})
+            res.status(404).json({ error })
         };
 
         res.sendServerError = (error) => {
@@ -93,7 +93,7 @@ export default class Router {
 
                 req.user = user;
                 next();
-            })(req, res, next); 
+            })(req, res, next);
         } else {
             next();
         }
@@ -124,8 +124,7 @@ export default class Router {
                 params[1].status(500).json({ status: 'error', message: error.message });
             }
 
-        }) 
+        })
 
     };
-
-}
+};
