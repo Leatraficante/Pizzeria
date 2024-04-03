@@ -5,11 +5,11 @@ import { isValidImageURL } from "../../utils/validators.js";
 const productsCollection = 'products';
 
 const productsSchema = new mongoose.Schema({
-    title: {
+    titulo: {
         type: String,
         required: true
     },
-    description: {
+    descripción: {
         type: String,
         required: true
     },
@@ -17,7 +17,7 @@ const productsSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    imagen: {
+    imágen: {
         type: String,
         required: true,
         validate: {
@@ -25,12 +25,12 @@ const productsSchema = new mongoose.Schema({
             message: props => `${props.value} no es una URL de imagen válida`
         }
     },
-    code: {
+    codigo: {
         type: String,
         required: true,
         unique: true
     },
-    price: {
+    precio: {
         type: Number,
         required: true,
         min: 0

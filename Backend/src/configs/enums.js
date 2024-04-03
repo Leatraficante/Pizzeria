@@ -38,11 +38,19 @@ const sizeTypes = {
     INDIVIDUAL: 'INDIVIDUAL'
 };
 
+const estadoOrdenTypes = {
+    PENDIENTE: 'PENDIENTE',
+    CANCELADA: 'CANCELADA',
+    CONFIRMADA: 'CONFIRMADA',
+    PAGADA: 'PAGADA'
+};
+
 
 export {
     passportStrategiesEnum,
     accessRolesEnum,
     addressTypes,
     categoryTypes,
-    sizeTypes
+    sizeTypes,
+    estadoOrdenTypes
 };
