@@ -1,12 +1,8 @@
 import mongoose from "mongoose";
 import { categoryTypes, sizeTypes } from "../../configs/enums.js";
+import { isValidImageURL } from "../../utils/validators.js";
 
 const productsCollection = 'products';
-
-const isValidImageURL = (url) => {
-    const imageRegex = /\.(gif|jpe?g|tiff?|png|webp|bmp)$/i;
-    return imageRegex.test(url);
-};
 
 const productsSchema = new mongoose.Schema({
     title: {

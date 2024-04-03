@@ -1,5 +1,6 @@
 import mongoose from 'mongoose';
 import { accessRolesEnum, addressTypes } from '../../configs/enums';
+import { validateEmail, validatePassword, validatePhoneNumber } from '../../utils/validators';
 
 const usersCollection = 'users';
 
@@ -34,9 +35,7 @@ const addressSchema = new mongoose.Schema({
         type: String,
         required: true,
         validate: {
-            validator: function (value) {
-                return /^\d{10}$/.test(value);
-            },
+            validator: validatePhoneNumber,
             message: props => `${props.value} no es un número de teléfono válido`
         }
     },
@@ -61,9 +60,7 @@ const usersSchema = new mongoose.Schema({
         unique: true,
         index: true,
         validate: {
-            validator: function (value) {
-                return /^\S+@\S+\.\S+$/.test(value);
-            },
+            validator: validateEmail,
             message: props => `${props.value} no es un correo electrónico válido`
         }
     },
@@ -76,9 +73,7 @@ const usersSchema = new mongoose.Schema({
         required: true,
         minlength: 8,
         validate: {
-            validator: function (value) {
-                return /[!@#$%^&*(),.?":{}|<>]/.test(value) && /[A-Z]/.test(value) && /[a-z]/.test(value);
-            },
+            validator: validatePassword,
             message: props => `${props.value} no es una contraseña segura`
         }
     },
