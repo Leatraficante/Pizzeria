@@ -82,7 +82,6 @@ const usersSchema = new mongoose.Schema({
             message: props => `${props.value} no es una contraseña segura`
         }
     },
-
     direcciones: {
         type: [addressSchema],
         validate: {

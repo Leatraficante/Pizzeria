@@ -24,9 +24,25 @@ const addressTypes = {
     OTRA: 'OTRA'
 };
 
+const categoryTypes = {
+    ESPECIAL: 'ESPECIAL',
+    CLASICA: 'CLASICA',
+    ORIGINAL: 'ORIGINAL',
+    VEGANA: 'VEGANA'
+
+};
+
+const sizeTypes = {
+    GRANDE: 'GRANDE',
+    MEDIANA: 'MEDIANA',
+    INDIVIDUAL: 'INDIVIDUAL'
+};
+
 
 export {
     passportStrategiesEnum,
     accessRolesEnum,
     addressTypes,
+    categoryTypes,
+    sizeTypes
 };
