@@ -1,14 +1,16 @@
 import express from 'express';
+import passport from 'passport';
+import mongoose from 'mongoose';
+
 import { __dirname } from '../src/utils.js';
 import { __mainDirname } from '../src/utils.js';
 
 import { initPassport } from './config/passport.config.js';
-import passport from 'passport';
-import mongoose from 'mongoose';
+
 
 import UsersRouter from '../src/routes/users.router.js';
 
-import configs from './src/configs/configs.js';
+import configs from './src/configs/configs.js'
 
 import { addLogger } from './loggers.js';
 
