@@ -1,12 +1,12 @@
 const passportStrategiesEnum = {
-    JWT: 'jwt',
-    NOTHING: 'na',
+  JWT: 'jwt',
+  NOTHING: 'na',
 };
 
 const accessRolesEnum = {
-    ADMIN: 'ADMIN',
-    USER: 'USER',
-    PUBLIC: 'PUBLIC',
+  ADMIN: 'ADMIN',
+  USER: 'USER',
+  PUBLIC: 'PUBLIC',
 };
 
 // const EErrors = {
@@ -19,38 +19,36 @@ const accessRolesEnum = {
 // };
 
 const addressTypes = {
-    CASA: 'CASA',
-    TRABAJO: 'TRABAJO',
-    OTRA: 'OTRA'
+  CASA: 'CASA',
+  TRABAJO: 'TRABAJO',
+  OTRA: 'OTRA',
 };
 
 const categoryTypes = {
-    ESPECIAL: 'ESPECIAL',
-    CLASICA: 'CLASICA',
-    ORIGINAL: 'ORIGINAL',
-    VEGANA: 'VEGANA'
-
+  ESPECIAL: 'ESPECIAL',
+  CLASICA: 'CLASICA',
+  ORIGINAL: 'ORIGINAL',
+  VEGANA: 'VEGANA',
 };
 
 const sizeTypes = {
-    GRANDE: 'GRANDE',
-    MEDIANA: 'MEDIANA',
-    INDIVIDUAL: 'INDIVIDUAL'
+  GRANDE: 'GRANDE',
+  MEDIANA: 'MEDIANA',
+  INDIVIDUAL: 'INDIVIDUAL',
 };
 
 const estadoOrdenTypes = {
-    PENDIENTE: 'PENDIENTE',
-    CANCELADA: 'CANCELADA',
-    CONFIRMADA: 'CONFIRMADA',
-    PAGADA: 'PAGADA'
+  PENDIENTE: 'PENDIENTE',
+  CANCELADA: 'CANCELADA',
+  CONFIRMADA: 'CONFIRMADA',
+  PAGADA: 'PAGADA',
 };
 
-
 export {
-    passportStrategiesEnum,
-    accessRolesEnum,
-    addressTypes,
-    categoryTypes,
-    sizeTypes,
-    estadoOrdenTypes
+  passportStrategiesEnum,
+  accessRolesEnum,
+  addressTypes,
+  categoryTypes,
+  sizeTypes,
+  estadoOrdenTypes,
 };

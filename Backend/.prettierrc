@@ -1,10 +1,7 @@
 {
-    "singleQuote": true,
-    "semi": true,
-    "tabWidth": 2,
-    "printWidth": 100,
-    "trimTrailingWhitespace": true,
-    "endOfLine": "auto",
-    "quoteProps": "consistent",
-    "objectPropertySortOrder": ["static-variables", "instance-variables", "static-methods", "instance-methods", "getters", "setters", "constructors", "everything-else"]
+  "singleQuote": true,
+  "semi": true,
+  "tabWidth": 2,
+  "printWidth": 100,
+  "endOfLine": "auto"
 }
