@@ -19,7 +19,7 @@ const pedidosSchema = new mongoose.Schema({
         min: 0
     },
     usuario: {
-        type: mongoose.Schema.Types.Mixed, 
+        type: mongoose.Schema.Types.Mixed,
         required: true
     },
     estado: {
@@ -51,20 +51,20 @@ const pedidosSchema = new mongoose.Schema({
     timestamps: true
 });
 
-pedidosSchema.index({usuario: 1});
+pedidosSchema.index({ usuario: 1 });
 
-pedidosSchema.path('productos').validate(function(value) {
+pedidosSchema.path('productos').validate(function (value) {
     return value.length > 0;
 }, 'Debe haber al menos 1 producto en el pedido.');
 
 // actualizar fecha antes de guardar el pedido
-pedidosSchema.pre('save', function(next) {
+pedidosSchema.pre('save', function (next) {
     this.updatedAt = new Date();
     next();
 });
 
 // eliminar productos asociados en cascada
-pedidosSchema.pre('remove', function(next) {
+pedidosSchema.pre('remove', function (next) {
     const productosIds = this.productos.map(producto => producto.productId);
     Producto.deleteMany({ _id: { $in: productosIds } })
         .then(() => next())
