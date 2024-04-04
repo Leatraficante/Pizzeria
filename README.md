@@ -48,3 +48,18 @@ Este proyecto tiene como objetivo desarrollar una plataforma de pedidos de pizza
 - **2024-04-04:** Creación archivo README.md.
 
 
+## Próximos Pasos
+
+Aquí se enumeran algunas de las tareas pendientes y próximas funcionalidades que se planean implementar en el proyecto:
+
+- [ ] Implementar y configurar passportJWT.
+- [ ] Implementar rutas y controladores para la gestión de usuarios.
+- [ ] Desarrollar las funcionalidades de autenticación de usuarios utilizando Passport.js.
+- [ ] Crear las rutas y controladores para la gestión de productos.
+- [ ] Integrar la funcionalidad de generación de pedidos y gestión del carrito de compras.
+- [ ] Implementar envío de correos electrónicos de confirmación de pedidos.
+- [ ] Mejorar la interfaz de usuario con estilos y componentes más atractivos.
+- [ ] Añadir pruebas unitarias y de integración para garantizar la calidad del código.
+- [ ] Documentar el proceso de instalación, configuración y uso en detalle.
+
+¡Siéntete libre de agregar, modificar o eliminar elementos de esta lista según sea necesario para reflejar los próximos pasos en el desarrollo de tu proyecto!
