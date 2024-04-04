@@ -62,4 +62,13 @@ Aquí se enumeran algunas de las tareas pendientes y próximas funcionalidades q
 - [ ] Añadir pruebas unitarias y de integración para garantizar la calidad del código.
 - [ ] Documentar el proceso de instalación, configuración y uso en detalle.
 
-¡Siéntete libre de agregar, modificar o eliminar elementos de esta lista según sea necesario para reflejar los próximos pasos en el desarrollo de tu proyecto!
+- [ ] Optimización de rendimiento: Identificar y mejorar áreas de la aplicación que pueden beneficiarse de mejoras de rendimiento.
+- [ ] Seguridad: Implementar medidas adicionales de seguridad, como la validación de datos de entrada y la protección contra ataques de inyección.
+- [ ] Internacionalización y localización: Incorporar soporte para múltiples idiomas y culturas.
+- [ ] Escalabilidad: Diseñar la arquitectura de la aplicación para que sea escalable a medida que crece el número de usuarios.
+- [ ] Monitoreo y registro: Configurar herramientas de monitoreo y registro para supervisar el rendimiento de la aplicación y registrar eventos relevantes.
+- [ ] Documentación adicional: Agregar más detalles a la documentación del proyecto, como guías de contribución y guías de estilo de código.
+- [ ] Feedback de usuarios: Recopilar y analizar comentarios de los usuarios para identificar áreas de mejora y nuevas características solicitadas.
+- [ ] Refactorización de código: Revisar y refactorizar el código existente para mejorar la legibilidad y la mantenibilidad.
+- [ ] Integraciones externas: Investigar y añadir integraciones con servicios externos que puedan mejorar la funcionalidad de la aplicación.
+- [ ] Pruebas de usuario final: Realizar pruebas con usuarios finales para obtener retroalimentación sobre la usabilidad y la experiencia del usuario.
