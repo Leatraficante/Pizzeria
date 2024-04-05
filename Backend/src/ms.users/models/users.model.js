@@ -90,6 +90,7 @@ const usersSchema = new mongoose.Schema(
     role: {
       type: String,
       default: accessRolesEnum.USER,
+      required: true,
     },
   },
   {

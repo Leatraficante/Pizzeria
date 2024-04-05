@@ -46,13 +46,17 @@ Este proyecto tiene como objetivo desarrollar una plataforma de pedidos de pizza
 - **2024-04-03:** Creación del microservicio de envío de correos electrónicos y actualización del enrutador.
 - **2024-04-04:** Integración de ESLint, Prettier y actualización de dependencias.
 - **2024-04-04:** Creación archivo README.md.
+- **2024-04-05:** Implementación de rutas y controladores en el microservicio de auth.
+- **2024-04-05:** Creación de archivo de servicio y repositorio en microservicio de auth.
+- **2024-04-05:** Creación de archivo de custom exceptions y utils en carpeta de utils
 
 
 ## Próximos Pasos
 
 Aquí se enumeran algunas de las tareas pendientes y próximas funcionalidades que se planean implementar en el proyecto:
 
-- [ ] Implementar y configurar passportJWT.
+- [ ] Trabajar sobre el service y repository del microservicio de auth.
+- [ ] Completar microservicio de auth.
 - [ ] Implementar rutas y controladores para la gestión de usuarios.
 - [ ] Desarrollar las funcionalidades de autenticación de usuarios utilizando Passport.js.
 - [ ] Crear las rutas y controladores para la gestión de productos.

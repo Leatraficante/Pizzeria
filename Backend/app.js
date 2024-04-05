@@ -7,10 +7,9 @@ import { __mainDirname } from '../src/utils.js';
 
 import { initPassport } from './config/passport.config.js';
 
-
 import UsersRouter from '../src/routes/users.router.js';
 
-import configs from './src/configs/configs.js'
+import configs from './src/configs/configs.js';
 
 import { addLogger } from './loggers.js';
 
