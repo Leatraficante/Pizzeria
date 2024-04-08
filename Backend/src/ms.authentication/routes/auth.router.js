@@ -2,7 +2,7 @@ import { accessRolesEnum } from '../../configs/enums.js';
 import Router from '../../router/router.js';
 import { register, login, logout } from '../controller/ms.authentication.controller.js';
 
-export default class authRouter extends Router {
+export default class AuthRouter extends Router {
   constructor() {
     super();
   }

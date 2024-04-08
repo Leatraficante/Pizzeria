@@ -9,6 +9,7 @@ const configs = {
   adminPassword: process.env.ADMIN_PASSWORD,
   userTestEmail: process.env.USER_TEST_EMAIL,
   userTestPassword: process.env.USER_TEST_PASSWORD,
+  privateKeyJWT: process.env.PRIVATE_KEY_JWT,
 };
 
 export default configs;

@@ -1,24 +1,13 @@
 import express from 'express';
 import passport from 'passport';
 import mongoose from 'mongoose';
-
-import { __dirname } from '../src/utils.js';
-import { __mainDirname } from '../src/utils.js';
-
-import { initPassport } from './config/passport.config.js';
-
-import UsersRouter from '../src/routes/users.router.js';
-
+import AuthRouter from './src/ms.authentication/routes/auth.router.js';
 import configs from './src/configs/configs.js';
-
 import { addLogger } from './loggers.js';
 
 const app = express();
 
-const usersRouter = new UsersRouter();
-
-initPassport();
-app.use(passport.initialize());
+const authRouter = new AuthRouter();
 
 app.use((req, res, next) => {
   next();
@@ -29,9 +18,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(addLogger);
 
-app.use(express.static(`${__dirname}/public`));
-
-app.use('/', viewsRouter.getRouter());
+app.use('/pizzeria/auth', authRouter.getRouter());
 
 app.use((err, req, res, next) => {
   console.error(err.stack);
