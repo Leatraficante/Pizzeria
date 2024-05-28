@@ -23,3 +23,17 @@ const register = async (user) => {
 
   return result;
 };
+
+const login = async () => {
+
+};
+
+const logout = async () => {
+
+};
+
+export {
+  register,
+  login,
+  logout
+}
