@@ -42,11 +42,11 @@ const login = async (req, res) => {
 
 const logout = async (req, res) => {
   try {
-    await authService.logout();
+    res.clearCookie('pizzeriaCookieToken');
     res.redirect('/login');
   } catch (error) {
     authLogger.error('Error en el logout de usuario:', error);
-    res.sendServerError(error.message);
+    res.status(500).json({ error: 'Error interno del servidor.' });
   }
 };
 

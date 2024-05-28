@@ -1,4 +1,4 @@
-import { createHash, isValidPassword } from '../../utils/utils.js';
+import { createHash, generateToken, isValidPassword } from '../../utils/utils.js';
 import { InvalidCredentials, UserAlreadyExists } from '../../utils/custom.exceptions.js';
 import UsersRepository from '../../ms.users/repository/ms.users.repository.js';
 
@@ -24,16 +24,26 @@ const register = async (user) => {
   return result;
 };
 
-const login = async () => {
+const login = async (email, password) => {
+  const user = usersRepository.getByEmail(email);
+  if (!user) {
+    throw new InvalidCredentials('Email o contraseña incorrectos, por favor intente nuevamente')
+  };
 
-};
+  const comparePassword = isValidPassword(password, user.password);
 
-const logout = async () => {
+  if (!comparePassword) {
+    throw new InvalidCredentials('Email o contraseña incorrectos, por favor intente nuevamente')
+  };
+
+  const { password: _, userResult } = user;
+  const accessToken = generateToken(userResult);
+
+  return { status: 'success', message: 'Login Exitoso', access_token: accessToken }
 
 };
 
 export {
   register,
   login,
-  logout
 }
