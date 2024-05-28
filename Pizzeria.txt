@@ -1,0 +1,85 @@
+pizzeria-backend/
+|__ pedidos-ms/
+|   |__ controllers/
+|   |   |__ PedidoController.js
+|   |
+|   |__ services/
+|   |   |__ PedidoService.js
+|   |
+|   |__ repositories/
+|   |   |__ PedidoRepository.js
+|   |
+|   |__ models/
+|   |   |__ Pedido.js
+|   |
+|   |__ routes/
+|   |   |__ pedidoRoutes.js
+|   |
+|   |__ app.js
+|
+|__ inventario-ms/
+|   |__ controllers/
+|   |   |__ InventarioController.js
+|   |
+|   |__ services/
+|   |   |__ InventarioService.js
+|   |
+|   |__ repositories/
+|   |   |__ InventarioRepository.js
+|   |
+|   |__ models/
+|   |   |__ Inventario.js
+|   |
+|   |__ routes/
+|   |   |__ inventarioRoutes.js
+|   |
+|   |__ app.js
+|
+|__ auth-ms/
+|   |__ controllers/
+|   |   |__ AuthController.js --> aca va el login (verificacion de credenciales)
+|   |   |__ UserController.js --> aca va el register (creacion en base de datos)
+|   |
+|   |__ services/
+|   |   |__ AuthService.js
+|   |   |__ UserService.js
+|   |
+|   |__ repositories/
+|   |   |__ AuthRepository.js
+|   |   |__ UserRepository.js
+|   |
+|   |__ models/
+|   |   |__ Auth.js
+|   |   |__ User.js
+|   |
+|   |__ routes/
+|   |   |__ authRoutes.js
+|   |   |__ userRoutes.js
+|   |
+|   |__ app.js
+|
+|__ shared/
+    |__ utils/
+    |   |__ logger.js
+    |   |__ validator.js
+    |
+    |__ constants/
+    |   |__ messages.js
+    |   |__ errors.js
+    |
+    |__ middleware/
+        |__ authMiddleware.js
+        |__ errorMiddleware.js
+
+
+pizzeria-frontend/
+|__ public/
+|__ src/
+    |__ assets/
+    |__ components/
+    |__ pages/
+    |__ services/
+    |__ styles/
+    |__ App.js
+    |__ index.js
+    |__ ...

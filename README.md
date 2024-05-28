@@ -50,13 +50,13 @@ Este proyecto tiene como objetivo desarrollar una plataforma de pedidos de pizza
 - **2024-04-05:** Creación de archivo de servicio y repositorio en microservicio de auth.
 - **2024-04-05:** Creación de archivo de custom exceptions y utils en carpeta de utils
 - **2024-04-08:** Trabajo sobre el ms.auth en el service y repository (funciones de register y login). 
+- **2024-05-28:** Implementación de JWT y PASSPORT en config > passport.js.
 
 
 ## Próximos Pasos
 
-Aquí se enumeran algunas de las tareas pendientes y próximas funcionalidades que se planean implementar en el proyecto:
+Pendientes y próximas funcionalidades que se planean implementar en el proyecto:
 
-- [ ] Aprender y Entender JWT y PASSPORT, implementación.
 - [ ] Trabajar sobre el service y repository del microservicio de auth.
 - [ ] Completar microservicio de auth.
 - [ ] Implementar rutas y controladores para la gestión de usuarios.
