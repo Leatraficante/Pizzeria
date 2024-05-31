@@ -5,9 +5,9 @@ import UsersRepository from '../../ms.users/repository/ms.users.repository.js';
 const usersRepository = new UsersRepository();
 
 const register = async (user) => {
-  const user = await usersRepository.getByEmail(email);
+  const userByEmail = await usersRepository.getByEmail(user.email);
 
-  if (user) {
+  if (userByEmail) {
     throw new UserAlreadyExists('Un usuario con el email ingreasdo ya ha sido registrado');
   }
 
@@ -25,7 +25,7 @@ const register = async (user) => {
 };
 
 const login = async (email, password) => {
-  const user = usersRepository.getByEmail(email);
+  const user = await usersRepository.getByEmail(email);
   if (!user) {
     throw new InvalidCredentials('Email o contraseña incorrectos, por favor intente nuevamente')
   };
@@ -36,7 +36,7 @@ const login = async (email, password) => {
     throw new InvalidCredentials('Email o contraseña incorrectos, por favor intente nuevamente')
   };
 
-  const { password: _, userResult } = user;
+  const { password: _, ...userResult } = user;
   const accessToken = generateToken(userResult);
 
   return { status: 'success', message: 'Login Exitoso', access_token: accessToken }
