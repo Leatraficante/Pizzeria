@@ -10,7 +10,7 @@ const validateEmail = (value) => {
 
 const validatePassword = (value) => {
   const passwordRegex = /[!@#$%^&*(),.?":{}|<>]/;
-  return passwordRegex.test(value) && /[A-Z]/.test(value) && /[a-z]/.test(value);
+  return passwordRegex.test(value) && /[A-Z]/.test(value) && /[a-z]/.test(value) && value.length >= 6;
 };
 
 const validatePhoneNumber = (value) => {

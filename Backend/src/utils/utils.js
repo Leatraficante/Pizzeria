@@ -3,7 +3,7 @@ import jwt from 'jsonwebtoken';
 import configs from '../configs/configs.js';
 
 const createHash = (password) => {
-  bcrypt.hashSync(password, bcrypt.genSaltSync(10));
+  return bcrypt.hashSync(password, bcrypt.genSaltSync(10));
 };
 
 const isValidPassword = (plainPassword, hashedPassword) =>

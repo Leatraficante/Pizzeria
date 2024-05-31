@@ -1,6 +1,9 @@
+import UsersRepository from '../../ms.users/repository/ms.users.repository.js';
 import { InvalidCredentials, UserAlreadyExists } from '../../utils/custom.exceptions.js';
 import authLogger from '../logger.js';
 import * as authService from '../service/ms.authentication.service.js';
+
+const usersRepository = new UsersRepository();
 
 const register = async (req, res) => {
   try {
@@ -30,7 +33,11 @@ const login = async (req, res) => {
       return res.sendClientError('Valores incompletos');
     }
 
-    const user = await authService.login({ ...req.body });
+    const result = await authService.login(email, password);
+
+    res.cookie('pizzeriaCookieToken', result.access_token, { maxAge: 24 * 60 * 60 * 1000, httpOnly: true })
+      .send({ status: 'success', message: 'Login realizdo con éxito' });
+
   } catch (error) {
     authLogger.error('Error en el login de usuario:', error);
     if (error instanceof InvalidCredentials) {
@@ -41,13 +48,16 @@ const login = async (req, res) => {
 };
 
 const logout = async (req, res) => {
+  const user = req.user;
+  console.log(user)
   try {
-    res.clearCookie('pizzeriaCookieToken');
-    res.redirect('/login');
+      res.clearCookie('pizzeriaCookieToken');
+      res.redirect("/login");
   } catch (error) {
-    authLogger.error('Error en el logout de usuario:', error);
-    res.status(500).json({ error: 'Error interno del servidor.' });
+      req.logger.error(error.message);
+      res.sendClientError({ status: 'error', message: error.message })
   }
 };
+
 
 export { register, login, logout };

@@ -4,10 +4,14 @@ import mongoose from 'mongoose';
 import AuthRouter from './src/ms.authentication/routes/auth.router.js';
 import configs from './src/configs/configs.js';
 import { addLogger } from './loggers.js';
+import { initPassport } from '../Backend/src/configs/passport.config.js'
 
 const app = express();
 
 const authRouter = new AuthRouter();
+
+initPassport();
+app.use(passport.initialize());
 
 app.use((req, res, next) => {
   next();

@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
-import { accessRolesEnum, addressTypes } from '../../configs/enums';
-import { validateEmail, validatePassword, validatePhoneNumber } from '../../utils/validators';
+import { accessRolesEnum, addressTypes } from '../../configs/enums.js';
+import { validateEmail, validatePassword, validatePhoneNumber } from '../../utils/validators.js';
 
 const usersCollection = 'users';
 

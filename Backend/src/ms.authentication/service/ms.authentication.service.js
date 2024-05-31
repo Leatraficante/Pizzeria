@@ -21,7 +21,7 @@ const register = async (user) => {
 
   const result = await usersRepository.save(newUser);
 
-  return result;
+  return { status: 'success', data: result };
 };
 
 const login = async (email, password) => {
