@@ -38,6 +38,8 @@ const login = async (req, res) => {
     res.cookie('pizzeriaCookieToken', result.access_token, { maxAge: 24 * 60 * 60 * 1000, httpOnly: true })
       .send({ status: 'success', message: 'Login realizdo con éxito' });
 
+    console.log(result)
+
   } catch (error) {
     authLogger.error('Error en el login de usuario:', error);
     if (error instanceof InvalidCredentials) {
@@ -48,9 +50,8 @@ const login = async (req, res) => {
 };
 
 const logout = async (req, res) => {
-  const user = req.user;
-  console.log(user)
   try {
+      await authService.logout();
       res.clearCookie('pizzeriaCookieToken');
       res.redirect("/login");
   } catch (error) {
@@ -59,5 +60,9 @@ const logout = async (req, res) => {
   }
 };
 
+const home = async (req, res) => {
+  console.log('Hola desde la homepage')
+}
 
-export { register, login, logout };
+
+export { register, login, logout, home };

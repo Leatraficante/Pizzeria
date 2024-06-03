@@ -1,0 +1,4 @@
+{"level":"info","message":"POST en /pizzeria/auth/register - 2024-06-03T14:08:52.641Z"}
+{"level":"info","message":"POST en /pizzeria/auth/login - 2024-06-03T14:08:55.238Z"}
+{"level":"info","message":"POST en /pizzeria/auth/logout - 2024-06-03T14:08:57.402Z"}
+{"level":"info","message":"GET en /login - 2024-06-03T14:08:57.452Z"}

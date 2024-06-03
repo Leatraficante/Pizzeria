@@ -43,7 +43,12 @@ const login = async (email, password) => {
 
 };
 
+const logout = async () => {
+  return { status: 'success', message: 'Logout realizado satisfactoriamente.' }
+};
+
 export {
   register,
   login,
+  logout
 }

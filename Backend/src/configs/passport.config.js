@@ -1,8 +1,8 @@
 import passport from 'passport';
 import jwt from 'passport-jwt';
 import { passportStrategiesEnum } from './enums.js';
-import usersModel from '../ms.users/models/users.model.js';
-import configs from './configs.js';
+import usersModel from '../ms.users/models/users.model.js'
+import configs from './configs.js'
 
 const JWTStrategy = jwt.Strategy;
 const extractJwt = jwt.ExtractJwt;
@@ -33,7 +33,7 @@ const initPassport = () => {
 const cookieExtractor = req => {
     let token = null;
     if (req && req.cookies) {
-        token = req.cookies['coderCookieToken'];
+        token = req.cookies['pizzeriaCookieToken'];
     }
     return token;
 };

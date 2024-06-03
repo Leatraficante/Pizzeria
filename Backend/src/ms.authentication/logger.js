@@ -17,7 +17,7 @@ const customLevelOptions = {
 };
 
 const fileTransporter = new winston.transports.DailyRotateFile({
-  dirname: './ms.authentication/logs',
+  dirname: '.logs/ms.authentication/logs',
   filename: 'authentication-%DATE%.log',
   datePattern: 'YYYY-MM-DD-HH-mm',
   zippedArchive: true,
