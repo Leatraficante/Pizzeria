@@ -1,9 +1,6 @@
-import UsersRepository from '../../ms.users/repository/ms.users.repository.js';
 import { InvalidCredentials, UserAlreadyExists } from '../../utils/custom.exceptions.js';
 import authLogger from '../logger.js';
 import * as authService from '../service/ms.authentication.service.js';
-
-const usersRepository = new UsersRepository();
 
 const register = async (req, res) => {
   try {
@@ -60,9 +57,5 @@ const logout = async (req, res) => {
   }
 };
 
-const home = async (req, res) => {
-  console.log('Hola desde la homepage')
-}
 
-
-export { register, login, logout, home };
+export { register, login, logout };
