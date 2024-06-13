@@ -1,11 +1,9 @@
 import { createHash, generateToken, isValidPassword } from '../../utils/utils.js';
 import { InvalidCredentials, UserAlreadyExists } from '../../utils/custom.exceptions.js';
-import UsersRepository from '../../ms.users/repository/ms.users.repository.js';
-
-const usersRepository = new UsersRepository();
+import * as usersService from '../../ms.users/service/ms.users.service.js';
 
 const register = async (user) => {
-  const userByEmail = await usersRepository.getByEmail(user.email);
+  const userByEmail = await usersService.getByEmail(user.email);
 
   if (userByEmail) {
     throw new UserAlreadyExists('Un usuario con el email ingreasdo ya ha sido registrado');
@@ -19,13 +17,13 @@ const register = async (user) => {
 
   newUser.password = hashedPassword;
 
-  const result = await usersRepository.save(newUser);
+  const result = await usersService.save(newUser);
 
   return { status: 'success', data: result };
 };
 
 const login = async (email, password) => {
-  const user = await usersRepository.getByEmail(email);
+  const user = await usersService.getByEmail(email);
   if (!user) {
     throw new InvalidCredentials('Email o contraseña incorrectos, por favor intente nuevamente')
   };

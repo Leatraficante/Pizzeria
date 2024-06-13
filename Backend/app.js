@@ -2,7 +2,7 @@ import express from 'express';
 import passport from 'passport';
 import mongoose from 'mongoose';
 import cookieParser from 'cookie-parser';
-import AuthRouter from './src/ms.authentication/routes/auth.router.js';
+import AuthRouter from './src/ms.authentication/routes/ms.auth.router.js';
 import configs from './src/configs/configs.js';
 import { addLogger } from './loggers.js';
 import { initPassport } from '../Backend/src/configs/passport.config.js'

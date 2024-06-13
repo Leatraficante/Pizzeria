@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 3
+    },
+    "auditLog": ".logs\\ms.authentication\\logs\\.752b6b4f6b9c0c9d036102712bff8ea70f9128a9-audit.json",
+    "files": [
+        {
+            "date": 1718292405947,
+            "name": ".logs\\ms.authentication\\logs\\authentication-2024-06-13-17-26.log",
+            "hash": "b70390fee6726f55fda00f73afd041fc8dad6fb27f299157efed8ff5e04f8e3a"
+        }
+    ],
+    "hashType": "sha256"
+}
