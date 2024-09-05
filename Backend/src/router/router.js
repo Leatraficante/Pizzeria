@@ -86,9 +86,6 @@ export default class Router {
         if (strategy === passportStrategiesEnum.JWT) {
             passport.authenticate(strategy, { session: false }, (err, user, info) => {
                 if (err) return next(err);
-                console.log(err)
-                console.log(user)
-                console.log(info)
                 if (!user) {
                     return res.status(401).json({ error: 'Autenticación Invalida' });
                 }
@@ -107,7 +104,6 @@ export default class Router {
             if (policies[0] === accessRolesEnum.PUBLIC) return next();
 
             const user = req.user;
-            console.log(user)
 
             if (!policies.includes(user.role.toUpperCase())) {
                 return res.status(403).json({ error: 'No tienes permisos necesarios' });

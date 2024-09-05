@@ -55,6 +55,7 @@ Este proyecto tiene como objetivo desarrollar una plataforma de pedidos de pizza
 - **2024-05-31:** Correciones en el microservicio de auth (register, login, logout). Creacion del repository del ms.users, el ms.auth usa el repository de ms.users (eliminación del repository en ms.auth)
 - **2024-06-03:** Correciones en el microservicio de auth (logout). Instalación de cookie-parser que era lo que estaba generando el error en el logout. 
 - **2024-06-13:** Primeros trabajos en el microservicio de usuarios. Service y Repository. Correccion en ms de auth. Creacion de carpeta y archivo de testeos para realizar mas adelante.
+- **2024-09-04:** Mejoras en el funcionamiento de logout. Pruebas con postman. 
 
 ## Próximos Pasos
 

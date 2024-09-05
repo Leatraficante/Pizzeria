@@ -35,8 +35,6 @@ const login = async (req, res) => {
     res.cookie('pizzeriaCookieToken', result.access_token, { maxAge: 24 * 60 * 60 * 1000, httpOnly: true })
       .send({ status: 'success', message: 'Login realizdo con éxito' });
 
-    console.log(result)
-
   } catch (error) {
     authLogger.error('Error en el login de usuario:', error);
     if (error instanceof InvalidCredentials) {
@@ -48,14 +46,14 @@ const login = async (req, res) => {
 
 const logout = async (req, res) => {
   try {
-      await authService.logout();
-      res.clearCookie('pizzeriaCookieToken');
-      res.redirect("/login");
+    res.clearCookie('pizzeriaCookieToken');
+    res.sendSuccess({ status: 'success', message: 'Logout realizado con éxito' });
   } catch (error) {
-      req.logger.error(error.message);
-      res.sendClientError({ status: 'error', message: error.message })
+    authLogger.error('Error en el logout de usuario:', error);
+    res.sendServerError({ status: 'error', message: error.message });
   }
 };
+
 
 
 export { register, login, logout };

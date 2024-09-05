@@ -6,9 +6,19 @@
     "auditLog": ".logs\\ms.authentication\\logs\\.752b6b4f6b9c0c9d036102712bff8ea70f9128a9-audit.json",
     "files": [
         {
-            "date": 1718292405947,
-            "name": ".logs\\ms.authentication\\logs\\authentication-2024-06-13-17-26.log",
-            "hash": "b70390fee6726f55fda00f73afd041fc8dad6fb27f299157efed8ff5e04f8e3a"
+            "date": 1725544640344,
+            "name": ".logs\\ms.authentication\\logs\\authentication-2024-09-05-15-57.log",
+            "hash": "a5dbffee2934bdb803b20af14551d508f6670b7039053e32df272271ef6a0eaf"
+        },
+        {
+            "date": 1725544684842,
+            "name": ".logs\\ms.authentication\\logs\\authentication-2024-09-05-15-58.log",
+            "hash": "af54637dc02e097b050043b39288c2506ac1ecba8c210ec4a7e8af7e1fd4600c"
+        },
+        {
+            "date": 1725544763879,
+            "name": ".logs\\ms.authentication\\logs\\authentication-2024-09-05-15-59.log",
+            "hash": "569982b80d801783d4fd36129bafd75086c499b12d2eb57042c7bfa8c50b8d54"
         }
     ],
     "hashType": "sha256"
