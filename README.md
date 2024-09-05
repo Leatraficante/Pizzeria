@@ -55,30 +55,37 @@ Este proyecto tiene como objetivo desarrollar una plataforma de pedidos de pizza
 - **2024-05-31:** Correciones en el microservicio de auth (register, login, logout). Creacion del repository del ms.users, el ms.auth usa el repository de ms.users (eliminación del repository en ms.auth)
 - **2024-06-03:** Correciones en el microservicio de auth (logout). Instalación de cookie-parser que era lo que estaba generando el error en el logout. 
 - **2024-06-13:** Primeros trabajos en el microservicio de usuarios. Service y Repository. Correccion en ms de auth. Creacion de carpeta y archivo de testeos para realizar mas adelante.
-- **2024-09-04:** Mejoras en el funcionamiento de logout. Pruebas con postman. 
+- **2024-09-04:** Mejoras en el funcionamiento de logout. Pruebas con postman. Nuevas funcionalidades en el repository y service de ms.users. 
 
 ## Próximos Pasos
 
-Pendientes y próximas funcionalidades que se planean implementar en el proyecto:
+### Funcionalidades Principales
 
 - [ ] Implementar rutas y controladores para la gestión de usuarios. 
 - [ ] Crear las rutas y controladores para la gestión de productos.
 - [ ] Integrar la funcionalidad de generación de pedidos y gestión del carrito de compras.
 - [ ] Implementar envío de correos electrónicos de confirmación de pedidos.
+- [ ] Funcionalidad para recuperar contraseña.
+  
+### Optimización y Mejora de la Aplicación
+
 - [ ] Mejorar la interfaz de usuario con estilos y componentes más atractivos.
-- [ ] Añadir pruebas unitarias y de integración para garantizar la calidad del código.
+- [ ] Optimización de rendimiento: Mejorar áreas críticas para un rendimiento más rápido.
+- [ ] Escalabilidad: Diseñar la aplicación para que soporte más usuarios y pedidos.
+- [ ] Seguridad: Añadir validación de datos de entrada y protección contra ataques comunes.
+  
+### Calidad y Mantenimiento
+
+- [ ] Añadir pruebas unitarias y de integración.
+- [ ] Monitoreo y registro: Configurar herramientas para supervisar el rendimiento.
+- [ ] Refactorización de código para mejorar la legibilidad y mantenibilidad.
+
+### Internacionalización y Localización
+
+- [ ] Incorporar soporte para múltiples idiomas y culturas.
+
+### Documentación y Retroalimentación
+
 - [ ] Documentar el proceso de instalación, configuración y uso en detalle.
-
-- [ ] Optimización de rendimiento: Identificar y mejorar áreas de la aplicación que pueden beneficiarse de mejoras de rendimiento.
-- [ ] Seguridad: Implementar medidas adicionales de seguridad, como la validación de datos de entrada y la protección contra ataques de inyección.
-- [ ] Internacionalización y localización: Incorporar soporte para múltiples idiomas y culturas.
-- [ ] Escalabilidad: Diseñar la arquitectura de la aplicación para que sea escalable a medida que crece el número de usuarios.
-- [ ] Monitoreo y registro: Configurar herramientas de monitoreo y registro para supervisar el rendimiento de la aplicación y registrar eventos relevantes.
-- [ ] Documentación adicional: Agregar más detalles a la documentación del proyecto, como guías de contribución y guías de estilo de código.
-- [ ] Feedback de usuarios: Recopilar y analizar comentarios de los usuarios para identificar áreas de mejora y nuevas características solicitadas.
-- [ ] Refactorización de código: Revisar y refactorizar el código existente para mejorar la legibilidad y la mantenibilidad.
-- [ ] Integraciones externas: Investigar y añadir integraciones con servicios externos que puedan mejorar la funcionalidad de la aplicación.
-- [ ] Pruebas de usuario final: Realizar pruebas con usuarios finales para obtener retroalimentación sobre la usabilidad y la experiencia del usuario.
-
-MEJORAS: 
-- [ ] Funcionalidad para recuperar password
+- [ ] Agregar guías de contribución y estilo de código.
+- [ ] Recopilar comentarios de los usuarios para mejorar funcionalidades.

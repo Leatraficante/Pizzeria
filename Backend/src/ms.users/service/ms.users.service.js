@@ -2,8 +2,12 @@ import UsersRepository from '../repository/ms.users.repository.js'
 
 const usersRepository = new UsersRepository()
 
-const getAll = async () => {
-    return usersRepository.getAll();
+const getAll = async (page = 1, limit = 10) => {
+    const options = {
+        page,
+        limit
+    };
+    return usersRepository.getAll(options);
 };
 
 const getByEmail = async (email) => {
@@ -24,8 +28,16 @@ const getbyRoles = async (roles) => {
 };
 
 const getByStatus = async (status) => {
-    return usersRepository.getbyRoles(status);
+    return usersRepository.getByStatus(status);
 
+};
+
+const updateUser = async (userId, userData) => {
+    return usersRepository.updateUser(userId, userData);
+};
+
+const deleteUser = async (userId) => {
+    return usersRepository.deleteUser(userId);
 };
 
 export {
@@ -34,5 +46,7 @@ export {
     save,
     getById,
     getbyRoles,
-    getByStatus
+    getByStatus,
+    updateUser,
+    deleteUser
 }

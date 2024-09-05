@@ -32,6 +32,16 @@ export default class UsersRepository {
     getByStatus = async (status) => {
         const users = await userModel.find({ status: { $in: status } });
         return users;
+    };
+
+    updateUser = async(userId, userData) => {
+        const user = await userModel.findByIdAndUpdate(userId, userData);
+        return user;
+    };
+
+    deleteUser = async(userId) => {
+        const user = await userModel.findByIdAndDelete(userId);
+        return user;
     }
 }
 
